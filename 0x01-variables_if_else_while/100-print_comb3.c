@@ -1,25 +1,27 @@
 #include <stdio.h>
 
 /**
- * main - print "all possible combinations of two digits
- * numbers be separated by , then followed by space"
- * using putchar
- * Return: Always 0 (Successfu)
+ * main - prints all possible different combinations of two digits
+ * Return: ALways 0 (Success)
  */
 int main(void)
 {
-	int number1, number2;
+	int n, m;
 
-	for (number1 = 0; number2 <= 9; number1++)
+	for (n = 48; n <= 56; n++)
 	{
-		for (number2 = number1 + 1; number2 <= 10; number2++)
+		for (m = 49; m <= 57; m++)
 		{
-			putchar((number1 % 10) + '0');
-			putchar ((number2 % 10) + '0');
-			if (number1 == 8 && number2 == 9)
-				continue;
-			putchar(',');
-			putchar(' ');
+			if (m > n)
+			{
+				putchar(n);
+				putchar(m);
+				if (n != 56 || m != 57)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
 	putchar('\n');
