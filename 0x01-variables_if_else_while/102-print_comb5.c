@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *Main - prints"all possible combinations of two-digit numbers 
+ *Main - prints"all possible combinations of two-digit numbers
  * ranging between 0 and 99"
  * Return: always 0 (successful)
  */
